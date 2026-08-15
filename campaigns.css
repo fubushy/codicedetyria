@@ -1,0 +1,157 @@
+/* ==========================================================================
+   CAMPAIGNS.CSS
+   Sección "Las Cuatro Campañas": pestañas (tabs) + panel con texto e
+   ilustración. La lógica de cambio de pestaña vive en js/main.js.
+   ========================================================================== */
+
+.campaigns {
+  padding-block: var(--space-3xl);
+  background-color: var(--color-bg-alt);
+}
+
+/* ---- Barra de pestañas --------------------------------------------------*/
+
+.campaign-tabs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border: 1px solid var(--color-border);
+  border-bottom: none;
+}
+
+.campaign-tab {
+  text-align: left;
+  padding: var(--space-md) var(--space-md);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 2px solid transparent;
+  background-color: transparent;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+
+.campaign-tab:last-child {
+  border-right: none;
+}
+
+.campaign-tab__name {
+  text-transform: uppercase;
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  color: var(--color-text-dim);
+  margin-bottom: 0.35em;
+  transition: color var(--transition-fast);
+}
+
+.campaign-tab__year {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+}
+
+.campaign-tab:hover {
+  background-color: rgba(201, 169, 97, 0.05);
+}
+
+.campaign-tab.is-active {
+  background-color: var(--color-bg-panel);
+  border-bottom-color: var(--color-gold);
+}
+
+.campaign-tab.is-active .campaign-tab__name {
+  color: var(--color-gold);
+}
+
+/* ---- Panel de contenido --------------------------------------------------*/
+
+.campaign-panels {
+  border: 1px solid var(--color-border);
+  background-color: var(--color-bg-panel);
+}
+
+.campaign-panel {
+  display: none;
+  grid-template-columns: 1fr 1fr;
+  min-height: 480px;
+}
+
+.campaign-panel.is-active {
+  display: grid;
+}
+
+.campaign-panel__text {
+  padding: var(--space-2xl) var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.campaign-panel__eyebrow {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  text-transform: uppercase;
+  color: var(--color-gold-dim);
+  margin-bottom: var(--space-md);
+}
+
+.campaign-panel__title {
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+  font-size: clamp(1.6rem, 3vw, 2.3rem);
+  color: var(--color-gold-bright);
+  margin-bottom: var(--space-xs);
+}
+
+.campaign-panel__subtitle {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-text-dim);
+  margin-bottom: var(--space-md);
+}
+
+.campaign-panel__desc {
+  font-size: var(--fs-body);
+  color: var(--color-text);
+  max-width: 46ch;
+  margin-bottom: var(--space-lg);
+}
+
+.campaign-panel__meta {
+  display: flex;
+  gap: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+}
+
+.campaign-panel__meta dt {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+  margin-bottom: 0.4em;
+}
+
+.campaign-panel__meta dd {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--color-text-bright);
+}
+
+.campaign-panel__image {
+  position: relative;
+  background-color: #060504;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.campaign-panel__image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 8, 6, 0.65) 0%, rgba(10, 8, 6, 0.05) 35%);
+}

@@ -1,0 +1,77 @@
+/* ==========================================================================
+   VARIABLES.CSS
+   Variables globales del sitio: colores, tipografías, espaciados y bordes.
+   Modificar estos valores cambia el aspecto de todo el sitio de forma
+   centralizada (útil para retocar el diseño desde Dreamweaver).
+   ========================================================================== */
+
+:root {
+  /* ---- Colores base (fondo) ------------------------------------------- */
+  --color-bg: #0a0806;              /* Fondo principal, casi negro */
+  --color-bg-alt: #0e0b06;          /* Fondo alterno de secciones */
+  --color-bg-panel: #120e08;        /* Fondo de tarjetas / paneles */
+  --color-bg-panel-hover: #181209;  /* Fondo de tarjetas en hover */
+  --color-bg-input: #0d0a05;
+
+  /* ---- Colores dorados (identidad principal) --------------------------- */
+  --color-gold: #c9a961;            /* Dorado principal */
+  --color-gold-bright: #e0c07e;     /* Dorado claro (títulos grandes) */
+  --color-gold-dim: #8a7245;        /* Dorado apagado (etiquetas pequeñas) */
+  --color-gold-soft: rgba(201, 169, 97, 0.5);
+
+  /* ---- Colores de texto -------------------------------------------------*/
+  --color-text: #ab9d8c;            /* Texto de párrafo estándar */
+  --color-text-bright: #e8dcc8;     /* Texto destacado / claro */
+  --color-text-dim: #6d6355;        /* Texto secundario apagado */
+  --color-text-muted: #4a4238;      /* Texto muy apagado (contadores, meta) */
+
+  /* ---- Bordes y líneas ---------------------------------------------------*/
+  --color-border: rgba(201, 169, 97, 0.16);
+  --color-border-strong: rgba(201, 169, 97, 0.4);
+  --color-border-soft: rgba(201, 169, 97, 0.08);
+
+  /* ---- Colores de acento por profesión (barra izquierda de las tarjetas) */
+  --prof-guerrero: #a83b3b;
+  --prof-ranger: #4c7c4a;
+  --prof-monje: #cbb46a;
+  --prof-necromante: #7a4f9c;
+  --prof-elementalista: #4a7fc0;
+  --prof-mesmer: #b34a92;
+  --prof-asesino: #3d4f8a;
+  --prof-ritualist: #3f9c8f;
+  --prof-paragon: #c17a35;
+  --prof-dervish: #9a958c;
+
+  /* ---- Tipografías ------------------------------------------------------*/
+  --font-display: 'Cinzel Decorative', 'Cinzel', Georgia, 'Times New Roman', serif;
+  --font-heading: 'Cinzel', Georgia, 'Times New Roman', serif;
+  --font-body: 'EB Garamond', Georgia, 'Times New Roman', serif;
+
+  /* ---- Tamaños tipográficos (escala fluida) -----------------------------*/
+  --fs-hero-title: clamp(2.6rem, 8vw, 5.5rem);
+  --fs-section-title: clamp(1.7rem, 4vw, 2.6rem);
+  --fs-card-title: clamp(1.1rem, 2vw, 1.4rem);
+  --fs-kicker: 0.78rem;
+  --fs-nav: 0.82rem;
+  --fs-body: 1.05rem;
+  --fs-small: 0.85rem;
+
+  /* ---- Espaciados (sistema de 8px) --------------------------------------*/
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  /* ---- Contenedor --------------------------------------------------------*/
+  --container-width: 1360px;
+  --container-padding: clamp(1.25rem, 4vw, 3rem);
+  --header-height: 76px; /* se reduce a 64px en móvil, ver responsive.css */
+
+  /* ---- Bordes y transiciones ----------------------------------------------*/
+  --radius-sm: 2px;
+  --transition-fast: 0.2s ease;
+  --transition-medium: 0.4s ease;
+}

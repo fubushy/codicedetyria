@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Códice de Tyria — Archivo completo de Guild Wars</title>
+  <meta name="description" content="Biblioteca digital de referencia en español para Guild Wars (2005). Campañas, profesiones, héroes, lore y guías del mundo de Tyria.">
+
+  <!-- Tipografías (Google Fonts): Cinzel Decorative para el título principal,
+       Cinzel para cabeceras/navegación, EB Garamond para el cuerpo de texto -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700;900&amp;family=Cinzel:wght@400;500;600&amp;family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&amp;display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos principal (importa el resto de módulos CSS) -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ==================================================================
+       CABECERA
+       ================================================================== -->
+  <header class="site-header">
+    <div class="container site-header__inner">
+
+      <a href="#inicio" class="site-logo" aria-label="Códice de Tyria — Inicio">
+        <span class="site-logo__mark" aria-hidden="true">◆</span>
+        <span class="site-logo__text">CÓDICE DE TYRIA</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Navegación principal">
+        <ul class="main-nav__list">
+          <li><a class="main-nav__link is-active" href="#campanas">Campañas</a></li>
+          <li><a class="main-nav__link" href="#profesiones">Profesiones</a></li>
+          <li><a class="main-nav__link" href="#heroes">Héroes</a></li>
+          <li><a class="main-nav__link" href="#mapas">Mapas</a></li>
+          <li><a class="main-nav__link" href="#builds">Builds</a></li>
+          <li><a class="main-nav__link" href="#lore">Lore</a></li>
+          <li><a class="main-nav__link" href="#titulos">Títulos</a></li>
+          <li><a class="main-nav__link" href="#guias">Guías</a></li>
+        </ul>
+      </nav>
+
+      <div class="site-header__actions">
+        <button type="button" class="icon-btn js-search-toggle" aria-label="Buscar en el códice" aria-pressed="false">
+          <span aria-hidden="true">🔍</span>
+        </button>
+      </div>
+
+      <button type="button" class="nav-toggle" aria-label="Abrir menú de navegación" aria-expanded="false">
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ==================================================================
+         HERO / PORTADA
+         ================================================================== -->
+    <section class="hero" id="inicio" style="--hero-illustration: url('images/campaign-prophecies.svg');">
+      <div class="hero__backdrop" aria-hidden="true"></div>
+
+      <span class="hero__sparkle hero__sparkle--tl" aria-hidden="true">✦</span>
+      <span class="hero__sparkle hero__sparkle--tr" aria-hidden="true">✦</span>
+      <span class="hero__sparkle hero__sparkle--bl" aria-hidden="true">✦</span>
+      <span class="hero__sparkle hero__sparkle--br" aria-hidden="true">✦</span>
+
+      <div class="hero__content">
+        <p class="hero__kicker">Biblioteca digital · Referencia en español</p>
+        <h1 class="hero__title">Códice de Tyria</h1>
+        <p class="hero__subtitle">Archivo completo de Guild Wars · Anno Domini 2005</p>
+        <blockquote class="hero__quote">
+          «Todo el conocimiento de Tyria reunido en un solo códice. Campañas, profesiones,
+          héroes, lore y guías para el aventurero que busca dominar las tierras del Elegido.»
+        </blockquote>
+        <div class="hero__cta">
+          <a href="#campanas" class="hero__cta-link">✦ Explorar el Archivo ✦</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         LAS CUATRO CAMPAÑAS
+         ================================================================== -->
+    <section class="campaigns" id="campanas">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="kicker">Annales Historici</span>
+          <h2 class="section-heading__title">Las Cuatro Campañas</h2>
+          <div class="section-heading__divider"><span aria-hidden="true">✦</span></div>
+        </div>
+
+        <!-- Pestañas -->
+        <div class="campaign-tabs" role="tablist" aria-label="Campañas de Guild Wars">
+          <button type="button" class="campaign-tab is-active" role="tab" aria-selected="true" aria-controls="panel-prophecies" data-tab-target="panel-prophecies">
+            <span class="campaign-tab__name">Prophecies</span>
+            <span class="campaign-tab__year">2005</span>
+          </button>
+          <button type="button" class="campaign-tab" role="tab" aria-selected="false" aria-controls="panel-factions" data-tab-target="panel-factions">
+            <span class="campaign-tab__name">Factions</span>
+            <span class="campaign-tab__year">2006</span>
+          </button>
+          <button type="button" class="campaign-tab" role="tab" aria-selected="false" aria-controls="panel-nightfall" data-tab-target="panel-nightfall">
+            <span class="campaign-tab__name">Nightfall</span>
+            <span class="campaign-tab__year">2006</span>
+          </button>
+          <button type="button" class="campaign-tab" role="tab" aria-selected="false" aria-controls="panel-eotn" data-tab-target="panel-eotn">
+            <span class="campaign-tab__name">Eye of the North</span>
+            <span class="campaign-tab__year">2007</span>
+          </button>
+        </div>
+
+        <!-- Paneles -->
+        <div class="campaign-panels">
+
+          <article class="campaign-panel is-active" id="panel-prophecies" role="tabpanel">
+            <div class="campaign-panel__text">
+              <p class="campaign-panel__eyebrow">Campaña principal</p>
+              <h3 class="campaign-panel__title">Guild Wars: Prophecies</h3>
+              <p class="campaign-panel__subtitle">El origen de Tyria</p>
+              <p class="campaign-panel__desc">
+                La campaña fundacional. Desde las nevadas cumbres de las Shiverpeaks hasta las
+                ruinas de Ascalon arrasadas por la Charr, el Elegido debe adentrarse en el
+                corazón de Tyria para sellar las puertas al Rift.
+              </p>
+              <dl class="campaign-panel__meta">
+                <div>
+                  <dt>Publicación</dt>
+                  <dd>2005</dd>
+                </div>
+                <div>
+                  <dt>Escenario</dt>
+                  <dd>Continente de Tyria</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="campaign-panel__image" style="background-image: url('images/campaign-prophecies.svg');" role="img" aria-label="Ilustración de las murallas de Ascalon en Prophecies"></div>
+          </article>
+
+          <article class="campaign-panel" id="panel-factions" role="tabpanel">
+            <div class="campaign-panel__text">
+              <p class="campaign-panel__eyebrow">Campaña independiente</p>
+              <h3 class="campaign-panel__title">Guild Wars: Factions</h3>
+              <p class="campaign-panel__subtitle">La guerra de Cantha</p>
+              <p class="campaign-panel__desc">
+                Entre los canales de Kaineng y los jardines flotantes de Cantha, el Ministerio
+                del Puño de Hierro y los Am Fah luchan por el destino de un imperio milenario
+                asolado por la peste de Jade.
+              </p>
+              <dl class="campaign-panel__meta">
+                <div>
+                  <dt>Publicación</dt>
+                  <dd>2006</dd>
+                </div>
+                <div>
+                  <dt>Escenario</dt>
+                  <dd>Continente de Cantha</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="campaign-panel__image" style="background-image: url('images/campaign-factions.svg');" role="img" aria-label="Ilustración de una pagoda de Cantha en Factions"></div>
+          </article>
+
+          <article class="campaign-panel" id="panel-nightfall" role="tabpanel">
+            <div class="campaign-panel__text">
+              <p class="campaign-panel__eyebrow">Campaña independiente</p>
+              <h3 class="campaign-panel__title">Guild Wars: Nightfall</h3>
+              <p class="campaign-panel__subtitle">El crepúsculo de Elona</p>
+              <p class="campaign-panel__desc">
+                Bajo las dunas de Elona, el Elegido de Nightfall se alía con los héroes Kormir y
+                Koss para enfrentarse a Abaddon, el dios caído, antes de que la oscuridad
+                consuma las tierras del sur.
+              </p>
+              <dl class="campaign-panel__meta">
+                <div>
+                  <dt>Publicación</dt>
+                  <dd>2006</dd>
+                </div>
+                <div>
+                  <dt>Escenario</dt>
+                  <dd>Continente de Elona</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="campaign-panel__image" style="background-image: url('images/campaign-nightfall.svg');" role="img" aria-label="Ilustración de un templo en las dunas de Elona en Nightfall"></div>
+          </article>
+
+          <article class="campaign-panel" id="panel-eotn" role="tabpanel">
+            <div class="campaign-panel__text">
+              <p class="campaign-panel__eyebrow">Expansión final</p>
+              <h3 class="campaign-panel__title">Guild Wars: Eye of the North</h3>
+              <p class="campaign-panel__subtitle">El destino de las razas de Tyria</p>
+              <p class="campaign-panel__desc">
+                Norn, asura, enanos y humanos se unen frente al despertar de los Destroza
+                Mundos. La expansión definitiva cierra el ciclo de Prophecies y sienta las
+                bases del mundo que heredará Guild Wars 2.
+              </p>
+              <dl class="campaign-panel__meta">
+                <div>
+                  <dt>Publicación</dt>
+                  <dd>2007</dd>
+                </div>
+                <div>
+                  <dt>Escenario</dt>
+                  <dd>Regiones árticas de Tyria</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="campaign-panel__image" style="background-image: url('images/campaign-eotn.svg');" role="img" aria-label="Ilustración de una fortaleza helada en Eye of the North"></div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         LAS DIEZ PROFESIONES
+         ================================================================== -->
+    <section class="professions" id="profesiones">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="kicker">Ordines Bellicosi</span>
+          <h2 class="section-heading__title">Las Diez Profesiones</h2>
+          <div class="section-heading__divider"><span aria-hidden="true">✦</span></div>
+        </div>
+
+        <ul class="profession-grid">
+          <li class="profession-card" style="--prof-color: var(--prof-guerrero);">
+            <div class="profession-card__icon" aria-hidden="true">⚔</div>
+            <h3 class="profession-card__name">Guerrero</h3>
+            <p class="profession-card__traits">Daño · Resistencia</p>
+            <p class="profession-card__attr">Attr. · Fuerza</p>
+          </li>
+          <li class="profession-card" style="--prof-color: var(--prof-ranger);">
+            <div class="profession-card__icon" aria-hidden="true">🏹</div>
+            <h3 class="profession-card__name">Ranger</h3>
+            <p class="profession-card__traits">Distancia · Naturaleza</p>
+            <p class="profession-card__attr">Attr. · Expertise</p>
+          </li>
+          <li class="profession-card" style="--prof-color: var(--prof-monje);">
+            <div class="profession-card__icon" aria-hidden="true">✦</div>
+            <h3 class="profession-card__name">Monje</h3>
+            <p class="profession-card__traits">Curación · Protección</p>
+            <p class="profession-card__attr">Attr. · Favor divino</p>
+          </li>
+          <li class="profession-card" style="--prof-color: var(--prof-necromante);">
+            <div class="profession-card__icon" aria-hidden="true">💀</div>
+            <h3 class="profession-card__name">Necrómante</h3>
+            <p class="profession-card__traits">Muerte · Maldiciones</p>
+            <p class="profession-card__attr">Attr. · Alma de muerte</p>
+          </li>
+          <li class="profession-card" style="--prof-color: var(--prof-elementalista);">
+            <div class="profession-card__icon" aria-hidden="true">🔥</div>
+            <h3 class="profession-card__name">Elementalista</h3>
+            <p class="profession-card__traits">Fuego · Agua · Tierra · Aire</p>
+            <p class="profession-card__attr">Attr. · Almacenamiento de energía</p>
+          </li>
+          <li class="profession-card" style="--prof-color: var(--prof-mesmer);">
+            <div class="profession-card__icon" aria-hidden="true">◈</div>
+            <h3 class="profession-card__name">Mesmer</h3>
+            <p class="profession-card__traits">Ilusión · Dominio</p>
+            <p class="profession-card__attr">Attr. · Liderazgo de rápida inducción</p>
+          </li>
+          <li class="profession-card" style="--prof-color: var(--prof-asesino);">
+            <div class="profession-card__icon" aria-hidden="true">🗡</div>
+            <h3 class="profession-card__name">Asesino</h3>
+            <p class="profession-card__traits">Sigilo · Combo</p>
+            <p class="profession-card__attr">Attr. · Crítico crítico</p>
+          </li>
+          <li class="profession-card" style="--prof-color: var(--prof-ritualist);">
+            <div class="profession-card__icon" aria-hidden="true">🌀</div>
+            <h3 class="profession-card__name">Ritualist</h3>
+            <p class="profession-card__traits">Comunión · Restauración</p>
+            <p class="profession-card__attr">Attr. · Comunión con los espíritus</p>
+          </li>
+          <li class="profession-card" style="--prof-color: var(--prof-paragon);">
+            <div class="profession-card__icon" aria-hidden="true">🔱</div>
+            <h3 class="profession-card__name">Paragon</h3>
+            <p class="profession-card__traits">Mando · Shouts</p>
+            <p class="profession-card__attr">Attr. · Liderazgo</p>
+          </li>
+          <li class="profession-card" style="--prof-color: var(--prof-dervish);">
+            <div class="profession-card__icon" aria-hidden="true">🌙</div>
+            <h3 class="profession-card__name">Dervish</h3>
+            <p class="profession-card__traits">Avatares · Encantamientos</p>
+            <p class="profession-card__attr">Attr. · Mística</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         ARTÍCULOS DESTACADOS + ENTRADAS DE LORE
+         ================================================================== -->
+    <section class="highlights" id="guias">
+      <div class="container highlights__grid">
+
+        <!-- Artículos destacados -->
+        <div class="highlights__col">
+          <div class="section-heading highlights__col-heading">
+            <span class="kicker">Scriptorium</span>
+            <h2 class="section-heading__title">Artículos Destacados</h2>
+            <div class="section-heading__divider"><span aria-hidden="true">✦</span></div>
+          </div>
+
+          <ul class="article-list">
+            <li class="article-item">
+              <span class="article-item__tag">Mecánicas</span>
+              <div>
+                <h3 class="article-item__title">El sistema de habilidades y barras de acción</h3>
+                <p class="article-item__excerpt">Cada personaje dispone de ocho habilidades en combate. La elección define por completo el rol, el estilo y la efectividad de cualquier build.</p>
+              </div>
+            </li>
+            <li class="article-item">
+              <span class="article-item__tag">Lore</span>
+              <div>
+                <h3 class="article-item__title">Los Cinco Dioses de Tyria</h3>
+                <p class="article-item__excerpt">Balthazar, Dwayna, Grenth, Lyssa y Melandru. Cada deidad otorga sus favores a quienes les sirven, moldeando así las profesiones sagradas del mundo.</p>
+              </div>
+            </li>
+            <li class="article-item">
+              <span class="article-item__tag">Guías</span>
+              <div>
+                <h3 class="article-item__title">Farming de oro eficiente en Prophecies</h3>
+                <p class="article-item__excerpt">Rutas optimizadas para la obtención de materiales raros, desde las Catacumbas de Ascalon hasta los rincones más profundos de las Shiverpeaks.</p>
+              </div>
+            </li>
+            <li class="article-item">
+              <span class="article-item__tag">Títulos</span>
+              <div>
+                <h3 class="article-item__title">Guía completa del Sunspear Castellan</h3>
+                <p class="article-item__excerpt">El rango máximo de los Sunspear en Elona desbloquea habilidades élite únicas y representa centenares de horas de dedicación en las arenas de Kourna.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Entradas de lore -->
+        <div class="highlights__col" id="lore">
+          <div class="section-heading highlights__col-heading">
+            <span class="kicker">Memoria Aeterna</span>
+            <h2 class="section-heading__title">Entradas de Lore</h2>
+            <div class="section-heading__divider"><span aria-hidden="true">✦</span></div>
+          </div>
+
+          <div class="lore-panel">
+            <p class="lore-panel__quote">«Estos son los registros que los escribas de la Biblioteca de Divinity's Reach han preservado para la posteridad de Tyria.»</p>
+
+            <ul class="lore-list">
+              <li class="lore-item">
+                <span class="lore-item__bullet" aria-hidden="true">◆</span>
+                <div>
+                  <h3 class="lore-item__title">La Searing</h3>
+                  <p class="lore-item__desc">El día en que el cielo ardió sobre Ascalon.</p>
+                </div>
+              </li>
+              <li class="lore-item">
+                <span class="lore-item__bullet" aria-hidden="true">◆</span>
+                <div>
+                  <h3 class="lore-item__title">El Imperio de Cantha</h3>
+                  <p class="lore-item__desc">Mil años de historia sellada tras sus muros.</p>
+                </div>
+              </li>
+              <li class="lore-item">
+                <span class="lore-item__bullet" aria-hidden="true">◆</span>
+                <div>
+                  <h3 class="lore-item__title">El Dominio del Dolor</h3>
+                  <p class="lore-item__desc">La prisión de Abaddon al borde de la realidad.</p>
+                </div>
+              </li>
+              <li class="lore-item">
+                <span class="lore-item__bullet" aria-hidden="true">◆</span>
+                <div>
+                  <h3 class="lore-item__title">La Ciudad de Arah</h3>
+                  <p class="lore-item__desc">La capital divina hundida bajo el mar.</p>
+                </div>
+              </li>
+              <li class="lore-item">
+                <span class="lore-item__bullet" aria-hidden="true">◆</span>
+                <div>
+                  <h3 class="lore-item__title">Los Destroza Mundos</h3>
+                  <p class="lore-item__desc">Colosos del Rift invocados para desgarrar la tierra.</p>
+                </div>
+              </li>
+              <li class="lore-item">
+                <span class="lore-item__bullet" aria-hidden="true">◆</span>
+                <div>
+                  <h3 class="lore-item__title">El Refugio de los Dioses</h3>
+                  <p class="lore-item__desc">Donde los inmortales abandonaron Tyria.</p>
+                </div>
+              </li>
+            </ul>
+
+            <a href="#" class="btn-outline">Ver archivo completo de lore</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         SECCIONES DEL CÓDICE
+         ================================================================== -->
+    <section class="codex-sections" id="secciones">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="kicker">Index Bibliotheca</span>
+          <h2 class="section-heading__title">Secciones del Códice</h2>
+          <div class="section-heading__divider"><span aria-hidden="true">✦</span></div>
+        </div>
+
+        <ul class="codex-grid">
+          <li class="codex-card" id="heroes">
+            <div class="codex-card__icon" aria-hidden="true">⚔</div>
+            <h3 class="codex-card__title">Héroes</h3>
+            <p class="codex-card__subtitle">Compañeros de batalla</p>
+            <p class="codex-card__count">45 entradas</p>
+          </li>
+          <li class="codex-card" id="mapas">
+            <div class="codex-card__icon" aria-hidden="true">◎</div>
+            <h3 class="codex-card__title">Mapas</h3>
+            <p class="codex-card__subtitle">Regiones y zonas</p>
+            <p class="codex-card__count">80 localizaciones</p>
+          </li>
+          <li class="codex-card" id="builds">
+            <div class="codex-card__icon" aria-hidden="true">✦</div>
+            <h3 class="codex-card__title">Builds</h3>
+            <p class="codex-card__subtitle">Configuraciones óptimas</p>
+            <p class="codex-card__count">120 plantillas</p>
+          </li>
+          <li class="codex-card" id="titulos">
+            <div class="codex-card__icon" aria-hidden="true">◆</div>
+            <h3 class="codex-card__title">Títulos</h3>
+            <p class="codex-card__subtitle">Logros y rangos</p>
+            <p class="codex-card__count">38 títulos</p>
+          </li>
+          <li class="codex-card" id="objetos">
+            <div class="codex-card__icon" aria-hidden="true">⊕</div>
+            <h3 class="codex-card__title">Objetos</h3>
+            <p class="codex-card__subtitle">Equipamiento y rarezas</p>
+            <p class="codex-card__count">500+ objetos</p>
+          </li>
+          <li class="codex-card" id="mecanicas">
+            <div class="codex-card__icon" aria-hidden="true">◈</div>
+            <h3 class="codex-card__title">Mecánicas</h3>
+            <p class="codex-card__subtitle">Sistemas del juego</p>
+            <p class="codex-card__count">60 artículos</p>
+          </li>
+          <li class="codex-card" id="guias-card">
+            <div class="codex-card__icon" aria-hidden="true">📜</div>
+            <h3 class="codex-card__title">Guías</h3>
+            <p class="codex-card__subtitle">Misiones y mazmorra</p>
+            <p class="codex-card__count">95 guías</p>
+          </li>
+          <li class="codex-card" id="pvp">
+            <div class="codex-card__icon" aria-hidden="true">🏆</div>
+            <h3 class="codex-card__title">PvP</h3>
+            <p class="codex-card__subtitle">Modos competitivos</p>
+            <p class="codex-card__count">25 formatos</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <div class="closing-divider">
+      <span aria-hidden="true">✦</span>
+      <span>Finis Coronat Opus</span>
+      <span aria-hidden="true">✦</span>
+    </div>
+
+  </main>
+
+  <!-- ==================================================================
+       PIE DE PÁGINA
+       ================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+
+      <div class="footer-brand">
+        <p class="footer-brand__title">Códice de Tyria</p>
+        <p class="footer-brand__desc">La biblioteca digital de referencia en español para Guild Wars (2005). Archivo completo de campañas, profesiones, lore y guías del mundo de Tyria.</p>
+      </div>
+
+      <nav class="footer-col" aria-label="El archivo">
+        <p class="footer-col__title">El Archivo</p>
+        <ul class="footer-col__list">
+          <li><a href="#campanas">Campañas</a></li>
+          <li><a href="#profesiones">Profesiones</a></li>
+          <li><a href="#heroes">Héroes</a></li>
+          <li><a href="#mapas">Mapas</a></li>
+          <li><a href="#lore">Lore</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Guías">
+        <p class="footer-col__title">Guías</p>
+        <ul class="footer-col__list">
+          <li><a href="#builds">Builds PvE</a></li>
+          <li><a href="#pvp">Builds PvP</a></li>
+          <li><a href="#guias">Farming</a></li>
+          <li><a href="#guias">Misiones</a></li>
+          <li><a href="#titulos">Títulos</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-col" aria-label="Acerca de">
+        <p class="footer-col__title">Acerca de</p>
+        <ul class="footer-col__list">
+          <li><a href="#">Sobre el Códice</a></li>
+          <li><a href="#">Contribuir</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Historial</a></li>
+        </ul>
+      </nav>
+
+    </div>
+
+    <div class="container site-footer__bottom">
+      <p class="site-footer__legal">© MMXXVI Códice de Tyria · Archivo no oficial · Guild Wars es marca de ArenaNet, LLC</p>
+      <p class="site-footer__tagline">«El conocimiento es el arma más poderosa de Tyria.»</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

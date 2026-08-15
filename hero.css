@@ -1,0 +1,128 @@
+/* ==========================================================================
+   HERO.CSS
+   Sección de portada: título principal, subtítulo, cita y enlace de scroll.
+   ========================================================================== */
+
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-block: var(--space-3xl);
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(60, 45, 20, 0.35), transparent 60%),
+    linear-gradient(180deg, #0c0906 0%, #0a0806 60%, #0a0806 100%);
+}
+
+/* Silueta decorativa de fondo (ruinas), generada en CSS/SVG, sutil */
+.hero__backdrop {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image: var(--hero-illustration);
+  background-repeat: no-repeat;
+  background-position: center 60%;
+  background-size: min(1100px, 90%);
+  filter: grayscale(0.3) brightness(0.7);
+  pointer-events: none;
+}
+
+.hero__backdrop::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(10, 8, 6, 0.2) 0%, rgba(10, 8, 6, 0.85) 85%);
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 920px;
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+}
+
+.hero__kicker {
+  font-family: var(--font-heading);
+  font-size: var(--fs-kicker);
+  letter-spacing: 0.35em;
+  color: var(--color-text-dim);
+  text-transform: uppercase;
+  margin-bottom: var(--space-md);
+}
+
+.hero__title {
+  font-family: var(--font-display);
+  font-size: var(--fs-hero-title);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-gold-bright);
+  text-shadow: 0 0 40px rgba(201, 169, 97, 0.25);
+  margin-bottom: var(--space-md);
+}
+
+.hero__subtitle {
+  font-family: var(--font-heading);
+  font-size: clamp(0.85rem, 1.6vw, 1.05rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+  margin-bottom: var(--space-lg);
+}
+
+.hero__quote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: clamp(1.05rem, 2vw, 1.3rem);
+  line-height: 1.7;
+  color: var(--color-text);
+  max-width: 680px;
+  margin: 0 auto var(--space-xl);
+}
+
+.hero__cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+}
+
+.hero__cta::before,
+.hero__cta::after {
+  content: '';
+  width: clamp(40px, 8vw, 100px);
+  height: 1px;
+  background: var(--color-border-strong);
+}
+
+.hero__cta-link {
+  font-family: var(--font-heading);
+  font-size: var(--fs-small);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-gold);
+  white-space: nowrap;
+  transition: color var(--transition-fast);
+}
+
+.hero__cta-link:hover {
+  color: var(--color-gold-bright);
+}
+
+/* Destellos decorativos en las esquinas del hero */
+.hero__sparkle {
+  position: absolute;
+  color: var(--color-gold-dim);
+  font-size: 1.1rem;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.hero__sparkle--tl { top: 14%; left: 4%; }
+.hero__sparkle--tr { top: 14%; right: 4%; }
+.hero__sparkle--bl { bottom: 12%; left: 4%; }
+.hero__sparkle--br { bottom: 12%; right: 4%; }

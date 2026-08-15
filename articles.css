@@ -1,0 +1,122 @@
+/* ==========================================================================
+   ARTICLES.CSS
+   Sección de dos columnas: "Artículos Destacados" (izquierda) y
+   "Entradas de Lore" (derecha).
+   ========================================================================== */
+
+.highlights {
+  padding-block: var(--space-3xl);
+  background-color: var(--color-bg-alt);
+}
+
+.highlights__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-2xl);
+}
+
+.highlights__col-heading {
+  margin-bottom: var(--space-lg);
+}
+
+/* ---- Columna de artículos ------------------------------------------------*/
+
+.article-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-item {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: var(--space-md);
+  padding-block: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.article-item:first-child {
+  padding-top: 0;
+}
+
+.article-item__tag {
+  align-self: start;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-gold-dim);
+  border: 1px solid var(--color-border-strong);
+  padding: 0.4em 0.6em;
+  text-align: center;
+  height: fit-content;
+}
+
+.article-item__title {
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  color: var(--color-gold-bright);
+  margin-bottom: 0.5em;
+}
+
+.article-item__excerpt {
+  font-size: 0.98rem;
+  color: var(--color-text-dim);
+}
+
+/* ---- Columna de lore -------------------------------------------------- */
+
+.lore-panel {
+  border: 1px solid var(--color-border);
+  padding: var(--space-xl) var(--space-lg);
+  background-color: rgba(201, 169, 97, 0.02);
+}
+
+.lore-panel__quote {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 1.05rem;
+  color: var(--color-text-dim);
+  padding-bottom: var(--space-md);
+  margin-bottom: var(--space-sm);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lore-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.lore-item {
+  display: flex;
+  gap: var(--space-sm);
+  padding-block: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.lore-item__bullet {
+  color: var(--color-gold-dim);
+  font-size: 0.8rem;
+  margin-top: 0.3em;
+}
+
+.lore-item__title {
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-gold-bright);
+  margin-bottom: 0.25em;
+}
+
+.lore-item__desc {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--color-text-dim);
+}
+
+.lore-panel .btn-outline {
+  display: block;
+  width: 100%;
+  margin-top: var(--space-md);
+}

@@ -1,0 +1,60 @@
+/* ==========================================================================
+   PROFESSIONS.CSS
+   Sección "Las Diez Profesiones": rejilla de tarjetas (grid) con borde de
+   color identificativo por profesión.
+   ========================================================================== */
+
+.professions {
+  padding-block: var(--space-3xl);
+  background-color: var(--color-bg);
+}
+
+.profession-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  border-top: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+}
+
+.profession-card {
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  border-left: 3px solid var(--prof-color, var(--color-gold));
+  padding: var(--space-lg) var(--space-md);
+  transition: background-color var(--transition-fast);
+}
+
+.profession-card:hover {
+  background-color: var(--color-bg-panel);
+}
+
+.profession-card__icon {
+  font-size: 1.5rem;
+  line-height: 1;
+  margin-bottom: var(--space-md);
+}
+
+.profession-card__name {
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  letter-spacing: 0.03em;
+  color: var(--color-gold);
+  margin-bottom: 0.4em;
+}
+
+.profession-card__traits {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--color-text-dim);
+  margin-bottom: var(--space-sm);
+}
+
+.profession-card__attr {
+  font-family: var(--font-heading);
+  font-size: 0.66rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}

@@ -1,0 +1,157 @@
+/* ==========================================================================
+   HEADER.CSS
+   Cabecera fija: logo, navegación principal y botón de búsqueda.
+   ========================================================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  /* Fondo sólido en vez de backdrop-filter: un backdrop-filter en este
+     contenedor crearía un "containing block" para el menú móvil en
+     position:fixed (.main-nav), rompiendo su posicionamiento respecto
+     al viewport en pantallas pequeñas. */
+  background-color: rgba(9, 7, 5, 0.97);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.site-header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-md);
+  height: var(--header-height, 76px);
+}
+
+/* ---- Logo --------------------------------------------------------------*/
+
+.site-logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-shrink: 0;
+}
+
+.site-logo__mark {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border-strong);
+  color: var(--color-gold);
+  font-size: 1.1rem;
+  transform: rotate(0deg);
+}
+
+.site-logo__text {
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  letter-spacing: 0.14em;
+  color: var(--color-gold-bright);
+  white-space: nowrap;
+}
+
+/* ---- Navegación ----------------------------------------------------------*/
+
+.main-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav__list {
+  display: flex;
+  align-items: center;
+  gap: clamp(1rem, 2.4vw, 2.2rem);
+}
+
+.main-nav__link {
+  font-family: var(--font-heading);
+  font-size: var(--fs-nav);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-text-dim);
+  position: relative;
+  padding-block: 0.4em;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.main-nav__link:hover,
+.main-nav__link:focus-visible,
+.main-nav__link.is-active {
+  color: var(--color-gold-bright);
+}
+
+.main-nav__link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 1px;
+  background-color: var(--color-gold);
+  transform: scaleX(0);
+  transition: transform var(--transition-fast);
+}
+
+.main-nav__link:hover::after,
+.main-nav__link.is-active::after {
+  transform: scaleX(1);
+}
+
+/* ---- Acciones (buscador) --------------------------------------------------*/
+
+.site-header__actions {
+  flex-shrink: 0;
+}
+
+.icon-btn {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--color-border);
+  color: var(--color-gold-dim);
+  font-size: 1rem;
+  transition: border-color var(--transition-fast), color var(--transition-fast);
+}
+
+.icon-btn:hover {
+  border-color: var(--color-border-strong);
+  color: var(--color-gold);
+}
+
+/* ---- Botón de menú móvil (oculto en escritorio) ---------------------------*/
+
+.nav-toggle {
+  display: none;
+  width: 40px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid var(--color-border);
+}
+
+.nav-toggle__bar {
+  width: 18px;
+  height: 1px;
+  background-color: var(--color-gold);
+  transition: transform var(--transition-fast), opacity var(--transition-fast);
+}
+
+.nav-toggle.is-open .nav-toggle__bar:nth-child(1) {
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle.is-open .nav-toggle__bar:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.is-open .nav-toggle__bar:nth-child(3) {
+  transform: translateY(-6px) rotate(-45deg);
+}

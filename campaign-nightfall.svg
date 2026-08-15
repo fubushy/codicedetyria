@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="skyN" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1c130a"/>
+      <stop offset="100%" stop-color="#0a0705"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#skyN)"/>
+  <circle cx="620" cy="140" r="70" fill="#241a0d" opacity="0.8"/>
+  <!-- dunas -->
+  <path d="M0 420 Q200 360 400 410 T800 400 L800 600 L0 600 Z" fill="#1a130a"/>
+  <path d="M0 470 Q220 430 460 470 T800 460 L800 600 L0 600 Z" fill="#120d07"/>
+  <!-- obelisco / templo -->
+  <polygon points="380,560 420,560 405,330 395,330" fill="#221a10"/>
+  <polygon points="360,560 440,560 400,300" fill="#1a130c" opacity="0.6"/>
+  <rect x="250" y="500" width="40" height="60" fill="#191209"/>
+  <rect x="510" y="500" width="40" height="60" fill="#191209"/>
+</svg>

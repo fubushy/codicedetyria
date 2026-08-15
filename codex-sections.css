@@ -1,0 +1,87 @@
+/* ==========================================================================
+   CODEX-SECTIONS.CSS
+   Sección "Secciones del Códice": rejilla 4x2 de tarjetas con icono,
+   título, subtítulo en cursiva y contador.
+   ========================================================================== */
+
+.codex-sections {
+  padding-block: var(--space-3xl);
+  background-color: var(--color-bg);
+}
+
+.codex-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+}
+
+.codex-card {
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: var(--space-xl) var(--space-md);
+  text-align: center;
+  transition: background-color var(--transition-fast);
+}
+
+.codex-card:hover {
+  background-color: var(--color-bg-panel);
+}
+
+.codex-card__icon {
+  font-size: 1.6rem;
+  color: var(--color-gold-dim);
+  margin-bottom: var(--space-md);
+}
+
+.codex-card__title {
+  text-transform: uppercase;
+  font-family: var(--font-heading);
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  color: var(--color-gold);
+  margin-bottom: 0.4em;
+}
+
+.codex-card__subtitle {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--color-text-dim);
+  margin-bottom: var(--space-sm);
+}
+
+.codex-card__count {
+  font-family: var(--font-heading);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+/* Línea final decorativa "FINIS CORONAT OPUS" antes del footer */
+.closing-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-sm);
+  padding-block: var(--space-2xl) var(--space-lg);
+  background-color: var(--color-bg);
+}
+
+.closing-divider::before,
+.closing-divider::after {
+  content: '';
+  width: clamp(60px, 12vw, 160px);
+  height: 1px;
+  background: var(--color-border-strong);
+}
+
+.closing-divider span {
+  font-family: var(--font-heading);
+  font-size: 0.72rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--color-gold-dim);
+  white-space: nowrap;
+}

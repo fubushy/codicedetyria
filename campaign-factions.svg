@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <defs>
+    <linearGradient id="skyF" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#171008"/>
+      <stop offset="100%" stop-color="#08070a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#skyF)"/>
+  <polygon points="0,340 150,260 300,330 450,240 600,320 800,270 800,600 0,600" fill="#1a150e" opacity="0.7"/>
+  <!-- pagoda escalonada -->
+  <g fill="#221b12">
+    <rect x="360" y="380" width="80" height="180"/>
+    <polygon points="330,380 470,380 400,330"/>
+    <rect x="345" y="300" width="110" height="18"/>
+    <polygon points="320,300 480,300 400,255"/>
+    <rect x="360" y="235" width="80" height="14"/>
+    <polygon points="345,235 455,235 400,195"/>
+  </g>
+  <rect x="392" y="150" width="16" height="45" fill="#171310"/>
+  <circle cx="400" cy="145" r="8" fill="#2a2115"/>
+  <!-- linternas -->
+  <circle cx="300" cy="420" r="10" fill="#3a2a12" opacity="0.8"/>
+  <circle cx="500" cy="420" r="10" fill="#3a2a12" opacity="0.8"/>
+</svg>

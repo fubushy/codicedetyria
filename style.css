@@ -1,0 +1,29 @@
+/* ==========================================================================
+   STYLE.CSS
+   Hoja de estilos principal del sitio "Códice de Tyria".
+   Este archivo NO contiene reglas propias: únicamente importa el resto de
+   hojas de estilo modulares, en el orden correcto de cascada.
+
+   Orden de importación (importante para Dreamweaver / mantenimiento):
+     1. variables.css      -> tokens de diseño (colores, tipografías...)
+     2. reset.css          -> normalización + utilidades compartidas
+     3. header.css          -> cabecera y navegación
+     4. hero.css             -> portada
+     5. campaigns.css        -> sección "Las Cuatro Campañas"
+     6. professions.css      -> sección "Las Diez Profesiones"
+     7. articles.css         -> "Artículos Destacados" + "Entradas de Lore"
+     8. codex-sections.css   -> "Secciones del Códice"
+     9. footer.css           -> pie de página
+    10. responsive.css       -> media queries (siempre al final)
+   ========================================================================== */
+
+@import url("variables.css");
+@import url("reset.css");
+@import url("header.css");
+@import url("hero.css");
+@import url("campaigns.css");
+@import url("professions.css");
+@import url("articles.css");
+@import url("codex-sections.css");
+@import url("footer.css");
+@import url("responsive.css");
